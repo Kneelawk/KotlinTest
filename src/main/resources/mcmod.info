@@ -1,0 +1,16 @@
+[
+{
+  "modid": "kotlintest",
+  "name": "Kotlin Test",
+  "description": "A simple test of kotlin's compatibility with minecraft.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Kneelawk"],
+  "credits": "Kneelawk for doing the kotlin",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
