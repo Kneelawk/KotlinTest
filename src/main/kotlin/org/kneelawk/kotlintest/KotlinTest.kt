@@ -6,6 +6,10 @@ import net.minecraftforge.fml.common.SidedProxy
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+import org.kneelawk.kotlintest.log.KotlinTestLog
+import org.kneelawk.kotlintest.proxy.IKotlinTestProxy
+import org.kneelawk.kotlintest.proxy.KotlinTestProxies
+import org.kneelawk.kotlintest.ref.Constants
 
 /**
  * Created by Kneelawk on 4/17/18.

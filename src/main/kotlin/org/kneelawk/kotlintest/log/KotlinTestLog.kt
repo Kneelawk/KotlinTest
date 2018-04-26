@@ -1,4 +1,4 @@
-package org.kneelawk.kotlintest
+package org.kneelawk.kotlintest.log
 
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import org.apache.logging.log4j.Logger

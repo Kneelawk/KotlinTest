@@ -1,4 +1,4 @@
-package org.kneelawk.kotlintest
+package org.kneelawk.kotlintest.ref
 
 /**
  * Created by Kneelawk on 4/17/18.
