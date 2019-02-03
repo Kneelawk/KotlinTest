@@ -26,9 +26,6 @@ object KotlinTest {
 
     @Mod.EventHandler
     fun init(event: FMLInitializationEvent) {
-        KotlinTestLog.log.info("Hello from Kotlin Test!!!")
-        KotlinTestLog.log.info("DIRT BLOCK >> ${Blocks.DIRT.registryName}")
-
         proxy.init(event)
     }
 

@@ -7,12 +7,16 @@ import org.apache.logging.log4j.Logger
  * Created by Kneelawk on 4/18/18.
  */
 object KotlinTestLog {
-    private var myLogger: Logger? = null
+    private lateinit var myLogger: Logger
 
     val log: Logger
-        get() = myLogger!!
+        get() = myLogger
 
     fun init(event: FMLPreInitializationEvent) {
         myLogger = event.modLog
+    }
+
+    fun info(string: String) {
+        log.info(string)
     }
 }
