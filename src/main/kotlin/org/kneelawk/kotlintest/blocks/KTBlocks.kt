@@ -8,6 +8,7 @@ import net.minecraft.item.ItemBlock
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.registry.ForgeRegistries
+import org.kneelawk.kotlintest.creativetabs.KTCreativeTabs
 import org.kneelawk.kotlintest.ref.Constants
 
 object KTBlocks {
@@ -18,6 +19,7 @@ object KTBlocks {
 
     fun init() {
         blockKotlin = createBlock("blockkotlin", Material.ROCK)
+        blockKotlin.block.setCreativeTab(KTCreativeTabs.KOTLIN)
     }
 
     private fun createBlock(name: String, material: Material): BlockItemPair {
