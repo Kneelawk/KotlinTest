@@ -12,14 +12,14 @@ object KTBlocks {
     val blocks = ArrayList<Block>()
     val items = ArrayList<Item>()
 
-    lateinit var blockKotlin: BlockItemPair
+    lateinit var blockKotlin: Block
 
     fun init() {
         blockKotlin = createBlock("blockkotlin", Material.ROCK)
-        blockKotlin.block.setCreativeTab(KTCreativeTabs.KOTLIN)
+                .setCreativeTab(KTCreativeTabs.KOTLIN)
     }
 
-    private fun createBlock(name: String, material: Material): BlockItemPair {
+    private fun createBlock(name: String, material: Material): Block {
         val block = Block(material)
         block.setRegistryName(Constants.MODID, name)
         block.unlocalizedName = Constants.getUnlocalizedName(name)
@@ -30,7 +30,7 @@ object KTBlocks {
         blocks += block
         items += itemBlock
 
-        return BlockItemPair(block, itemBlock)
+        return block
     }
 
     fun registerBlocks() {
