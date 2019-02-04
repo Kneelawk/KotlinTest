@@ -3,21 +3,46 @@ package org.kneelawk.kotlintest.client.models
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.item.Item
 import net.minecraftforge.client.model.ModelLoader
+import org.kneelawk.kotlintest.items.IHasItemMetaNames
 import org.kneelawk.kotlintest.blocks.KTBlocks
 import org.kneelawk.kotlintest.items.KTItems
 
 object KTItemModels {
     fun init() {
-        ModelLoader.setCustomModelResourceLocation(
-                Item.getItemFromBlock(KTBlocks.blockKotlin),
-                0,
-                ModelResourceLocation(KTBlocks.blockKotlin.registryName!!, "inventory")
-        )
+        KTBlocks.blocks.forEach { block ->
+            if (block is IHasItemMetaNames) {
+                block.getMetaNames().forEach { meta, name ->
+                    ModelLoader.setCustomModelResourceLocation(
+                            Item.getItemFromBlock(block),
+                            meta,
+                            ModelResourceLocation(block.registryName!!, name)
+                    )
+                }
+            } else {
+                ModelLoader.setCustomModelResourceLocation(
+                        Item.getItemFromBlock(block),
+                        block.getMetaFromState(block.defaultState),
+                        ModelResourceLocation(block.registryName!!, "inventory")
+                )
+            }
+        }
 
-        ModelLoader.setCustomModelResourceLocation(
-                KTItems.itemKotlin,
-                0,
-                ModelResourceLocation(KTItems.itemKotlin.registryName!!, "inventory")
-        )
+        KTItems.items.forEach { item ->
+            if (item is IHasItemMetaNames) {
+                item.getMetaNames().forEach { meta, name ->
+                    ModelLoader.setCustomModelResourceLocation(
+                            item,
+                            meta,
+                            ModelResourceLocation(item.registryName!!, name)
+                    )
+                }
+            } else {
+                ModelLoader.setCustomModelResourceLocation(
+                        item,
+                        0,
+                        ModelResourceLocation(item.registryName!!, "inventory")
+                )
+            }
+        }
     }
 }
