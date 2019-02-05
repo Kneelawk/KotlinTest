@@ -15,7 +15,7 @@ object KTBlocks {
     lateinit var blockKotlin: Block
 
     fun init() {
-        blockKotlin = createBlock("blockkotlin", Material.ROCK)
+        blockKotlin = createBlock("block_kotlin", Material.ROCK)
                 .setCreativeTab(KTCreativeTabs.KOTLIN)
     }
 

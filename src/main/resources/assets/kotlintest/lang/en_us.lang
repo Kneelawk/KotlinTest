@@ -1,5 +1,5 @@
-tile.kotlintest.blockkotlin.name=Kotlin Block
+tile.kotlintest.block_kotlin.name=Kotlin Block
 
-item.kotlintest.itemkotlin.name=Kotlin
+item.kotlintest.item_kotlin.name=Kotlin
 
 itemGroup.kotlin=Kotlin

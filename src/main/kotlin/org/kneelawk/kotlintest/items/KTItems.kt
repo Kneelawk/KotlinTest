@@ -11,7 +11,7 @@ object KTItems {
     lateinit var itemKotlin: Item
 
     fun init() {
-        itemKotlin = createItem("itemkotlin").setCreativeTab(KTCreativeTabs.KOTLIN)
+        itemKotlin = createItem("item_kotlin").setCreativeTab(KTCreativeTabs.KOTLIN)
     }
 
     private fun createItem(name: String): Item {

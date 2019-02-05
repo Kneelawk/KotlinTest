@@ -19,11 +19,22 @@ object KTItemModels {
                     )
                 }
             } else {
-                ModelLoader.setCustomModelResourceLocation(
-                        Item.getItemFromBlock(block),
-                        block.getMetaFromState(block.defaultState),
-                        ModelResourceLocation(block.registryName!!, "inventory")
-                )
+                val item = Item.getItemFromBlock(block)
+                if (item is IHasItemMetaNames) {
+                    item.getMetaNames().forEach { meta, name ->
+                        ModelLoader.setCustomModelResourceLocation(
+                                item,
+                                meta,
+                                ModelResourceLocation(block.registryName!!, name)
+                        )
+                    }
+                } else {
+                    ModelLoader.setCustomModelResourceLocation(
+                            item,
+                            block.getMetaFromState(block.defaultState),
+                            ModelResourceLocation(block.registryName!!, "inventory")
+                    )
+                }
             }
         }
 

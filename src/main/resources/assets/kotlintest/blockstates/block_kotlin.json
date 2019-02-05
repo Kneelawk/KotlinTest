@@ -1,7 +1,7 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "kotlintest:blockkotlin"
+    "model": "kotlintest:block_kotlin"
   },
   "variants": {
     "normal": [
