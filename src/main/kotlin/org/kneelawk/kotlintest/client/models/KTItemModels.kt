@@ -58,12 +58,5 @@ object KTItemModels {
                 )
             }
         }
-
-        val customModelsField = ModelLoader::class.java.getDeclaredField("customModels")
-        customModelsField.isAccessible = true
-        val customModels = customModelsField.get(null) as Map<Pair<IRegistryDelegate<Item>, Integer>, ModelResourceLocation>
-        customModels.forEach { item, resource ->
-            KotlinTestLog.info("${item.left.name()}:${item.right} = $resource")
-        }
     }
 }

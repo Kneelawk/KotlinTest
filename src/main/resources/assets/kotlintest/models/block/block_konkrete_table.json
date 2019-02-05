@@ -1,0 +1,9 @@
+{
+  "parent": "kotlintest:block/block_table",
+  "textures": {
+    "particle": "kotlintest:blocks/block_konkrete_table_top",
+    "top": "kotlintest:blocks/block_konkrete_table_top",
+    "side": "kotlintest:blocks/block_konkrete_table_side",
+    "bottom": "kotlintest:blocks/block_konkrete_table_bottom"
+  }
+}

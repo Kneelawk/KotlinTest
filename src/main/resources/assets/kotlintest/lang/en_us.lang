@@ -4,6 +4,8 @@ tile.kotlintest.block_kotlin.name=Kotlin Block
 tile.kotlintest.block_konkrete.variant\=normal.name=Konkrete Block
 tile.kotlintest.block_konkrete.variant\=bricks.name=Konkrete Bricks
 tile.kotlintest.block_konkrete.variant\=tiles.name=Konkrete Tiles
+tile.kotlintest.block_konkrete_pillar.name=Konkrete Pillar
+tile.kotlintest.block_konkrete_table.name=Konkrete Table
 
 item.kotlintest.item_kotlin.name=Kotlin
 

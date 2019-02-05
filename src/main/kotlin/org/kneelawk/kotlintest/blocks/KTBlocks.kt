@@ -16,6 +16,7 @@ object KTBlocks {
     lateinit var blockKotlin: Block
     lateinit var blockKonkrete: Block
     lateinit var blockKonkretePillar: Block
+    lateinit var blockKonkreteTable: Block
 
     fun init() {
         blockKotlin = createBlock("block_kotlin", Material.ROCK)
@@ -25,6 +26,9 @@ object KTBlocks {
                 .setCreativeTab(KTCreativeTabs.KOTLIN)
 
         blockKonkretePillar = setupBlock("block_konkrete_pillar", BlockKonkretePillar(Material.ROCK))
+                .setCreativeTab(KTCreativeTabs.KOTLIN)
+
+        blockKonkreteTable = setupBlock("block_konkrete_table", BlockKonkreteTable(Material.ROCK))
                 .setCreativeTab(KTCreativeTabs.KOTLIN)
     }
 
