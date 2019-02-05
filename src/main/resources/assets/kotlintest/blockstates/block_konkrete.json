@@ -1,0 +1,16 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "variant": {
+      "normal": {
+        "model": "kotlintest:block_konkrete"
+      },
+      "bricks": {
+        "model": "kotlintest:block_konkrete_bricks"
+      },
+      "tiles": {
+        "model": "kotlintest:block_konkrete_tiles"
+      }
+    }
+  }
+}

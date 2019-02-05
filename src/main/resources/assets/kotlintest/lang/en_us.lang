@@ -1,4 +1,9 @@
+#PARSE_ESCAPES
+
 tile.kotlintest.block_kotlin.name=Kotlin Block
+tile.kotlintest.block_konkrete.variant\=normal.name=Konkrete Block
+tile.kotlintest.block_konkrete.variant\=bricks.name=Konkrete Bricks
+tile.kotlintest.block_konkrete.variant\=tiles.name=Konkrete Tiles
 
 item.kotlintest.item_kotlin.name=Kotlin
 
