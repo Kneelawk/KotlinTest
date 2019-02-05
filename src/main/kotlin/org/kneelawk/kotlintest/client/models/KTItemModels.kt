@@ -3,9 +3,12 @@ package org.kneelawk.kotlintest.client.models
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.item.Item
 import net.minecraftforge.client.model.ModelLoader
+import net.minecraftforge.registries.IRegistryDelegate
+import org.apache.commons.lang3.tuple.Pair
 import org.kneelawk.kotlintest.items.IHasItemMetaNames
 import org.kneelawk.kotlintest.blocks.KTBlocks
 import org.kneelawk.kotlintest.items.KTItems
+import org.kneelawk.kotlintest.log.KotlinTestLog
 
 object KTItemModels {
     fun init() {
@@ -54,6 +57,13 @@ object KTItemModels {
                         ModelResourceLocation(item.registryName!!, "inventory")
                 )
             }
+        }
+
+        val customModelsField = ModelLoader::class.java.getDeclaredField("customModels")
+        customModelsField.isAccessible = true
+        val customModels = customModelsField.get(null) as Map<Pair<IRegistryDelegate<Item>, Integer>, ModelResourceLocation>
+        customModels.forEach { item, resource ->
+            KotlinTestLog.info("${item.left.name()}:${item.right} = $resource")
         }
     }
 }

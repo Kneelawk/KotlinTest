@@ -1,6 +1,5 @@
 package org.kneelawk.kotlintest.blocks
 
-import io.netty.util.Constant
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
 import net.minecraft.item.Item
@@ -16,12 +15,16 @@ object KTBlocks {
 
     lateinit var blockKotlin: Block
     lateinit var blockKonkrete: Block
+    lateinit var blockKonkretePillar: Block
 
     fun init() {
         blockKotlin = createBlock("block_kotlin", Material.ROCK)
                 .setCreativeTab(KTCreativeTabs.KOTLIN)
 
         blockKonkrete = setupBlockWithMetaNames("block_konkrete", BlockKonkrete(Material.ROCK))
+                .setCreativeTab(KTCreativeTabs.KOTLIN)
+
+        blockKonkretePillar = setupBlock("block_konkrete_pillar", BlockKonkretePillar(Material.ROCK))
                 .setCreativeTab(KTCreativeTabs.KOTLIN)
     }
 
@@ -58,6 +61,7 @@ object KTBlocks {
 
         val itemBlock = ItemBlockWithMetaNames(block)
         itemBlock.registryName = block.registryName
+        itemBlock.hasSubtypes = true
 
         blocks += block
         items += itemBlock
